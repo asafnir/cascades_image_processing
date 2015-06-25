@@ -15,6 +15,9 @@ gem 'bootstrap-sass'
 gem 'high_voltage'
 gem 'pg'
 gem 'simple_form'
+
+gem 'ruby-opencv', "~> 0.0.10", :require => 'opencv'
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
