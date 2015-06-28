@@ -16,7 +16,7 @@ gem 'high_voltage'
 gem 'pg'
 gem 'simple_form'
 
-# gem 'ruby-opencv'
+gem 'ruby-opencv'
 
 group :development do
   gem 'better_errors'
