@@ -1,4 +1,4 @@
-# include OpenCV
+include OpenCV
 
 class TestcascadesController < ApplicationController
 	def index
