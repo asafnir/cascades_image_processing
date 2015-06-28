@@ -172,9 +172,12 @@ DEPENDENCIES
   rails (= 4.2.0)
   rails_12factor
   rails_layout
-  ruby-opencv (~> 0.0.10)
+  ruby-opencv
   sass-rails (~> 5.0)
   simple_form
   spring
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
+
+BUNDLED WITH
+   1.10.5
