@@ -13,4 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
+//= require spin
+//= require ladda
+//= require ladda.jquery
 //= require_tree .

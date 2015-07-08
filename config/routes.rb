@@ -6,4 +6,7 @@ Rails.application.routes.draw do
 
   post 'upload_photo' , to: 'testcascades#upload_photo'
 
+  get 'search_images' , to: 'createcascades#search_images', :defaults => { :format => 'json' }
+
+  post 'createcascades' , to: 'createcascades#create' 
 end

@@ -18,6 +18,9 @@ gem 'pg'
 gem 'simple_form'
 
 gem 'ruby-opencv'
+gem 'google-search', '~> 1.0.3'
+gem "ladda-rails"
+gem 'sidekiq'
 
 group :development do
   gem 'better_errors'

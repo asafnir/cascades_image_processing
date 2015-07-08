@@ -1,0 +1,28 @@
+<div class="container">
+	<h1>Test the HAAR CLASSIFIER</h1>
+	<br>
+	<div class="row">
+		<%= simple_form_for :get_images ,:method => "get",:url => 'search_images', :id=> "searchImages" ,:class => "box" ,remote: true do  |f| %>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="query">What object you want to look for?</label>
+		    		<%= f.input "query", :class => "form-control required", :label => false,  :required => true %>
+		    	</div>
+		    	<button type="submit" id="getImages" class="btn ladda-button"><span class="ladda-label">Get images</span></button>
+		    </div>
+		<% end %>
+	</div>
+	<hr>
+	<%= simple_form_for :createcascades ,:method => "post",:url => 'createcascades' do  |f| %>
+		<div class="row">
+			<div class="create col-md-12" hidden>
+				Select the image for your object and then click here: 
+				<button type="submit" class="btn btn-default " id="createHR" >Create Classifier</a>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-md-12 images"></div>
+		</div>
+	<% end %>
+</div>

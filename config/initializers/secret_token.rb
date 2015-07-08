@@ -1,0 +1,1 @@
+ImageProcessing::Application.config.secret_key_base = '32a957bfd1b4e49d56e06b18c621ca3a00a50c2430937a0c42dae9b8b7e895595b51b8c628d89ad3b465fa38ba22cda9800b22623ea82819144a778cee6a1a99'

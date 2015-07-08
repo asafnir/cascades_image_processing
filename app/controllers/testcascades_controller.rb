@@ -37,6 +37,6 @@ class TestcascadesController < ApplicationController
 		end
 
 		image.save_image(image_link)
-        image_link.remove("public/")
+        image_link.gsub("public/","")
     end
 end
