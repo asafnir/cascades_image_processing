@@ -1,12 +1,12 @@
 module Cascade
 	class Classifier
 		
-		def createsamples image_name,type
+		def self.createsamples image_name,type,query
 			if type=="jpg"
-				cmd = "opencv_createsamples -img /home/user/#{} -bg /home/user/bg.txt -info /home/user/annotations.lst -pngoutput -maxxangle 0.1 -maxyangle 0.1 -maxzangle 0.1 -vec file_name -w 80 -h 80"
+				cmd = "opencv_createsamples -img #{Rails.root.join("public/tmp/#{query}", image_name)} -bg #{Rails.root.join("public/tmp", "bg.txt")} -info #{Rails.root.join("public/tmp/#{query}", "annotations.lst")} -pngoutput -maxxangle 0.1 -maxyangle 0.1 -maxzangle 0.1 -vec #{Rails.root.join("public/tmp/#{query}", "samples.vec")} -w 80 -h 80"
 				res = system(cmd)
 				return res
-			elsif type="png"
+			elsif type=="png"
 				cmd = "opencv_createsamples -img /home/user/logo.png -bg /home/user/bg.txt -info annotations.lst -maxxangle 0.1 -maxyangle 0.1 -maxzangle 0.1 -vec file_name -w 80 -h 80"
 				res = res
 			else

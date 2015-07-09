@@ -20,6 +20,9 @@ $(document).ready ->
 								</div>"
 		$(".create").show()
 		$('#createHR').prop('disabled', true)
+		query = $("#get_images_query").value
+		$("#createcascades_object_name").value query
+		console.log query 
 
 	
 	
