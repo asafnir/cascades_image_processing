@@ -8,5 +8,5 @@ Rails.application.routes.draw do
 
   get 'search_images' , to: 'createcascades#search_images', :defaults => { :format => 'json' }
 
-  post 'createcascades' , to: 'createcascades#create' 
+  post 'createcascades' , to: 'createcascades#create_createcascades' 
 end

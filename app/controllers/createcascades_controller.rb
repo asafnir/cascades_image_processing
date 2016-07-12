@@ -11,7 +11,7 @@ class CreatecascadesController < ApplicationController
         end
 	end
 
-	def create
+	def create_createcascades
 		image_url = params[:optionsRadios]
 		query = params[:createcascades][:object_name]
 		image_name = image_url.split("/").last
@@ -27,7 +27,10 @@ class CreatecascadesController < ApplicationController
 				format.html {render 'index'}
 			end
 		rescue Exception => e
-			p e
+			respond_to do |format|
+				flash[:notice] = "There is a problem Cascade Classifier"	
+				format.html {render 'index'}
+			end
 		end
 	end
 

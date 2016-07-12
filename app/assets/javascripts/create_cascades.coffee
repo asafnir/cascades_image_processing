@@ -1,6 +1,8 @@
 $(document).ready ->
 	@enableButton = () ->
 		$('#createHR').prop('disabled', false)
+	$("#createHR").on "submit",() ->
+		$(body).addClass("wait")
 	l = Ladda.create( document.querySelector( '#getImages' ) )
 	Ladda.bind( 'input#getImages' );
 	$(document).bind "ajaxSuccess", "form#searchImages", (event, xhr, settings) ->
@@ -20,8 +22,8 @@ $(document).ready ->
 								</div>"
 		$(".create").show()
 		$('#createHR').prop('disabled', true)
-		query = $("#get_images_query").value
-		$("#createcascades_object_name").value query
+		query = $("#get_images_query").val()
+		$("#createcascades_object_name").val query
 		console.log query 
 
 	
